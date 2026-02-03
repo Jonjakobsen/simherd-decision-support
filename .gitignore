@@ -1,0 +1,25 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+build/
+dist/
+
+# Data og modeller (vigtigt: upload ikke store CSV-filer eller .pth modeller)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!models/trained/.gitkeep
+
+# IDE og system filer
+.vscode/
+.idea/
+.DS_Store
+
+# R relateret
+.Rproj.user/
+.Rhistory
+.RData
