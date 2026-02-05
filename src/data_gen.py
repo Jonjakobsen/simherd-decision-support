@@ -24,12 +24,11 @@ class DairyDataGenerator:
         """
         is_sick = np.zeros(days, dtype=int)
         
-        # Vi vælger en tilfældig dag til udbrud (mellem dag 40 og 250)
+        # Vælg en tilfældig dag til udbrud (mellem dag 40 og 250)
         onset = np.random.randint(40, 250)
         duration = 14  # 14 dages forløb
         
-        # Lav et 'klokkeformet' tab i ydelse
-        # Vi bruger en simpel trekants- eller sinus-profil for at simulere fald og recovery
+        # Lav et klokkeformet tab i ydelse
         t_disease = np.linspace(0, np.pi, duration)
         reduction_intensity = 8.0 * np.sin(t_disease)  # Max tab på 8kg mælk
         
@@ -51,7 +50,6 @@ class DairyDataGenerator:
         yield_curve = self.wood_model(t)
         
         # 2. Tilføj støj (biologisk varians + målefejl)
-        # Vi bruger en lille smule autokorreleret støj for realisme
         noise = np.random.normal(0, 1.2, size=days)
         milk_yield = yield_curve + noise
         
