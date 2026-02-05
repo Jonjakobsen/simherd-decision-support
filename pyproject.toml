@@ -1,29 +1,28 @@
-[project]
-name = "simherd-decision-support"
-version = "0.1.0"
-description = "ML-baseret beslutningsstøtte til malkekvæg"
-authors = [{name = "Jon Skaarup Jakobsen", email = "jonskaarupjakobsen@gmail.com"}]
-requires-python = ">=3.10"
-dependencies = [
-    "numpy>=1.24.0",
-    "pandas>=2.0.0",
-    "torch>=2.0.0",       # Til din GRU-model
-    "matplotlib>=3.7.0",
-    "streamlit>=1.30.0",   # Til din frontend
-    "scikit-learn>=1.3.0"
-]
-
-[project.optional-dependencies]
-dev = [
-    "pytest",
-    "ruff",         # Moderne linter og formatter
-    "ipykernel"     # Til dine notebooks
-]
-
 [build-system]
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
-[tool.ruff]
-line-length = 88
-select = ["E", "F", "I"] # Standard regler for ren kode
+[project]
+name = "simherd-decision-support"
+version = "0.1.0"
+description = "Early Warning System til detektion af sygdom hos køer vha. GRU og økonomisk beslutningsstøtte."
+authors = [
+    { name = "Jon Skaarup Jakobsen", email = "jonskaarupjakobsen@gmail.com" }
+]
+dependencies = [
+    "torch",
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "scikit-learn>=1.2.0",
+    "matplotlib>=3.7.0",
+    "seaborn>=0.12.0",
+    "streamlit>=1.22.0",
+]
+
+
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

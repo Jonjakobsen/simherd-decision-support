@@ -1,0 +1,10 @@
+services:
+  simherd-app:
+    build: .
+    container_name: simherd_container
+    ports:
+      - "8501:8501"
+    environment:
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
+    restart: always
