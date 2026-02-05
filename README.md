@@ -46,6 +46,15 @@ Projektet er optimeret til at køre på CPU for at minimere image-størrelse og 
     Åbn din browser på `http://localhost:8501`
 
 ---
+## 📊 Resultater & Visualisering
+Herunder ses confusion matrix og precision-recall kurve
+
+### Modelpræstation
+![Model Evaluation](plots/model_evaluation.png)
+
+
+---
+
 
 ## 📁 Projektstruktur
 * `app/main.py`: Streamlit-brugerflade og økonomisk logik.
