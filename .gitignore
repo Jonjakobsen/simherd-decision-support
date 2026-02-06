@@ -7,9 +7,6 @@ env/
 build/
 dist/
 
-# Data og modeller
-data/raw/*
-data/processed/*
 
 
 # IDE og system filer
